@@ -1,0 +1,123 @@
+{
+  "notice": "Synthetic evaluation only \u2014 simulator scenario labels are not field ground truth.",
+  "model": "Random Forest",
+  "seed": 42017,
+  "samples": 1600,
+  "test_samples": 400,
+  "accuracy": 0.84,
+  "classes": [
+    "Normal",
+    "Slow",
+    "Poor penetration",
+    "Root not reached",
+    "Excess irrigation"
+  ],
+  "per_class": [
+    {
+      "class": "Normal",
+      "precision": 0.7647,
+      "recall": 0.8125,
+      "f1": 0.7879,
+      "support": 80
+    },
+    {
+      "class": "Slow",
+      "precision": 0.8333,
+      "recall": 0.875,
+      "f1": 0.8537,
+      "support": 80
+    },
+    {
+      "class": "Poor penetration",
+      "precision": 0.7632,
+      "recall": 0.725,
+      "f1": 0.7436,
+      "support": 80
+    },
+    {
+      "class": "Root not reached",
+      "precision": 0.8947,
+      "recall": 0.85,
+      "f1": 0.8718,
+      "support": 80
+    },
+    {
+      "class": "Excess irrigation",
+      "precision": 0.9494,
+      "recall": 0.9375,
+      "f1": 0.9434,
+      "support": 80
+    }
+  ],
+  "confusion_matrix": [
+    [
+      65,
+      4,
+      2,
+      5,
+      4
+    ],
+    [
+      3,
+      70,
+      6,
+      1,
+      0
+    ],
+    [
+      10,
+      10,
+      58,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      10,
+      68,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      0,
+      75
+    ]
+  ],
+  "feature_importance": [
+    {
+      "feature": "irrigation_rate",
+      "importance": 0.194
+    },
+    {
+      "feature": "irrigation_duration",
+      "importance": 0.1657
+    },
+    {
+      "feature": "drainage",
+      "importance": 0.1404
+    },
+    {
+      "feature": "cumulative_infiltration",
+      "importance": 0.1174
+    },
+    {
+      "feature": "front_depth",
+      "importance": 0.0753
+    },
+    {
+      "feature": "gradient_s1_s3",
+      "importance": 0.0614
+    },
+    {
+      "feature": "delay_s1_s2",
+      "importance": 0.0608
+    },
+    {
+      "feature": "soil_ks",
+      "importance": 0.0454
+    }
+  ]
+}
