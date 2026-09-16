@@ -6,6 +6,8 @@ A polished, deterministic research simulator for the sequence:
 
 All displayed and exported observations are **simulation-generated**. Nothing in this project is represented as field-measured data.
 
+**Live deployment:** <https://rhizome-root-zone-simulator.raghavs.workers.dev>
+
 ## Quick start on macOS (Apple Silicon)
 
 Open the project folder in VS Code, then run:
@@ -21,6 +23,22 @@ Open the local URL printed by Vite (normally <http://localhost:5173>). To make a
 ```bash
 npm run build
 npm run preview
+```
+
+## Deploy to Cloudflare
+
+The app is configured as a Cloudflare Worker containing static assets. First authenticate once, then deploy:
+
+```bash
+cd /Users/shadow/Projects/EMB/soil_wetting_ui
+npx wrangler login
+npm run deploy:cloudflare
+```
+
+Cloudflare returns a public `workers.dev` URL. Later updates only require `npm run deploy:cloudflare`. Validate the complete deployment bundle without publishing by running:
+
+```bash
+npm run deploy:cloudflare:dry
 ```
 
 ## Project structure

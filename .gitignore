@@ -1,5 +1,6 @@
 node_modules/
 dist/
 .venv/
+.wrangler/
 .DS_Store
 *.log
